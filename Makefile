@@ -24,6 +24,8 @@ default: test build
 
 .PHONY: lint
 lint:
+	go get github.com/commitsar-app/commitsar@v0.7.0
+	commitsar
 	go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.18.0
 	GOGC=30 golangci-lint run
 
